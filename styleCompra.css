@@ -1,0 +1,58 @@
+body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* navbar */
+
+  nav a img {
+    height: 50px;
+    width: 75px;
+  }
+
+  
+  /* color ultimo link */
+
+  #last {
+    color: green;
+  }
+
+
+
+.card{
+    transition: all 0.5s;
+  }
+
+  .card:hover{
+    box-shadow: 2px 2px 20px black;
+    transform: translateY(-5px); 
+  }
+
+
+  ol{
+    list-style-position: inside ;
+  }
+  ol li{
+    margin: 4rem 0;
+  }
+
+  ol li h1{
+    margin-bottom: 2rem;
+    background-color: rgb(255, 213, 134);
+    border-radius: 5px;
+    padding: 0.5rem ;
+  }
+
+/* footer */
+
+#footer {
+    background: rgb(0, 31, 61);
+    background: linear-gradient(124deg, rgba(0, 31, 61, 1) 0%, rgba(23, 66, 108, 1) 66%, rgba(62, 100, 138, 1) 100%);
+  }
+  
+  #footer .col-12 a {
+    color: white;
+    height: 4rem;
+    text-decoration: none
+  }
+   

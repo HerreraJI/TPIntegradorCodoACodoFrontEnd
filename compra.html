@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrador JHerrera</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleCompra.css">
+</head>
+
+<body>
+
+    <!-- navegacion -->
+
+    <nav class="navbar navbar-expand-lg  bg-body-tertiary " data-bs-theme="dark" id="nav">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/codoacodo.png" alt="logo codo a codo">
+                Conf Bs As</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+                <ul class="navbar-nav  nav-underline pe-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#octubre">La conferencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#oradores">Los oradores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#octubre">El lugar y la fecha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#formulario">Conviertete en orador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" id="last">Comprar tickets</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <form action="/exito.html" method="get" class="was-validated" id="form" novalidate>
+            <ol class="container-fluid">
+
+    <!--elija ticket-->
+                <li id="elegirPlan">
+                    <div class="row">
+                        <h1 class="text-center">Elija su Ticket</h1>
+                    </div>
+                    <div class="row gy-3">
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-header">
+                                    DIA
+                                </div>
+                                <div class="card-body">
+                                    <h2>$1500</h2>
+                                    <h5 class="card-title">Vale por un dia</h5>
+                                    <p class="card-text">Con este ticket tendrá acceso a un dia de conferencia a su
+                                        elección.</p>
+                                    <a href="#cantidad" class="btn btn-primary w-100" id="dia">Elegir</a>
+                                </div>
+                                <div class="card-footer text-body-secondary">
+                                    Conferencia Bs As
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-header">
+                                    PARCIAL
+                                </div>
+                                <div class="card-body">
+                                    <h2>$2000</h2>
+                                    <h5 class="card-title">Vale por 3 días</h5>
+                                    <p class="card-text">Con este ticket tendrá acceso a 3 dias de conferencia a su
+                                        elección.</p>
+                                    <a href="#cantidad" class="btn btn-primary w-100" id="parcial">Elegir</a>
+                                </div>
+                                <div class="card-footer text-body-secondary">
+                                    Conferencia Bs As
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="card text-center">
+                                <div class="card-header">
+                                    COMPLETO
+                                </div>
+                                <div class="card-body">
+                                    <h2>$3000</h2>
+                                    <h5 class="card-title">Acceso FULL</h5>
+                                    <p class="card-text">Con este ticket tendrá acceso a todos los dias de conferencia,
+                                        <strong>SIN LIMITES</strong>
+                                    </p>
+                                    <a href="#cantidad" class="btn btn-primary w-100" id="completo">Elegir</a>
+                                </div>
+                                <div class="card-footer text-body-secondary">
+                                    Conferencia Bs As
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+     <!--cantidad de tickets-->           
+
+                <li id="cantidad">
+                    <div class="row mb-5">
+                        <h1 class="text-center">Elija cantidad de tickets</h1>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="number" name="cantidad" min="1" max="100" 
+                                        placeholder="cantidad" class="form-control" id="valor" required>
+                                </div>
+                                <div class="col">
+                                    <label for="cantidad" class="fs-4 me-3">Total: $</label><span class="fs-3" id="total">0</span>
+                                </div>  
+                               
+                            </div>
+                            <div class="row">
+                                <div class="small ms-2"> valor unitario: $<span id="totalUnitario">1500</span></div>
+                            </div>
+                            <div class="row">
+                                <a href="#elegirPlan" class="btn btn-success my-4" id="cambiarPlan">Cambiar plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+<!--metodo de pago-->
+
+                <li>
+                    <div class="row">
+                        <h1 class="text-center">Elija método de pago</h1>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 mx-4">
+                            <div class="row my-3">
+                                <div class="col">
+                                    <select class="form-select" novalidate aria-label="Default select example">
+                                        <option selected>Ver opciones de pago disponibles</option>
+                                        <option value="1">Tarjeta de Crédito</option>
+                                        <option value="2">Tarjeta de débito</option>
+                                        <option value="3">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row gy-3">
+                                <div class="col-12">
+                                    <div class="input-group input-group-sm">
+                                        <span class="input-group-text">Numero</span>
+                                        <input type="number" min="0" value="0000" max=9999 max="9999" aria-label="primeros cuatro numeros" class="form-control" required>
+                                        <input type="number" min="0" value="0000" max=9999 max="9999" aria-label="segundos cuatro numeros" class="form-control" required>
+                                        <input type="number" min="0" value="0000" max=9999 max="9999" aria-label="terceros cuatro numeros" class="form-control" required>
+                                        <input type="number" min="0" value="0000" max=9999 max="9999" aria-label="ultimos cuatro numeros" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <span class="input-group-text">Cód de seguridad</span>
+                                        <input type="number" min="0" value="000" max="999" aria-label="codigo de seguridad" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+
+
+    <!-- Confirmar -->
+
+                <li>                    
+                    <div class="row mb-4 gy-3">
+                        <h1 class="mb-3 text-center">Confirmar</h1>
+                        
+                            <div class="form-check col-12">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">                              
+                                 Acepta terminos y condiciones
+                                </label>
+                                <div class="invalid-feedback">
+                                    Debe aceptar terminos
+                                </div>
+                              </div>
+                        <div class="col-md-6">
+                            <button type="submit" class="btn btn-success btn-lg w-100 me-3">COMPRAR</button>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="reset" class="btn btn-danger w-100 btn-lg" value="Cancelar" id="cancelar">
+                        </div>
+                    </div>
+                    
+                </li>
+            </ol>
+        </form>
+    </div>
+
+    <!-- footer -->
+
+    <footer class="container-fluid px-lg-5 " id="footer">
+        <div class="row justify-content-evenly align-items-center px-5 mx-lg-5">
+            <div class="col-12 col-md text-center py-2 px-0 "><a href="">Preguntas frecuentes</a></div>
+            <div class="col-12 col-md text-center py-2 px-0 "><a href="">Contáctanos</a></div>
+            <div class="col-12 col-md text-center py- px-0 "><a href="">Prensa</a></div>
+            <div class="col-12 col-md text-center py-2 px-0 "><a href="">Conferencias</a></div>
+            <div class="col-12 col-md text-center py-2 px-0 "><a href="">Términos y condiciones</a></div>
+            <div class="col-12 col-md text-center py-2 px-0 "><a href="">Privacidad</a></div>
+            <div class="col-12 col-md text-center py-2 px-0 "><a href="">Estudiantes</a></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/91a32acd3c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
