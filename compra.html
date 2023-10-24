@@ -47,10 +47,10 @@
 
 
     <div class="container">
-        <form action="/exito.html" method="get" class="was-validated" id="form" novalidate>
+        <form action="/exito.html" method="get" class="was-validated" id="form">
             <ol class="container-fluid">
 
-    <!--elija ticket-->
+                <!--elija ticket-->
                 <li id="elegirPlan">
                     <div class="row">
                         <h1 class="text-center">Elija su Ticket</h1>
@@ -113,7 +113,7 @@
                 </li>
 
 
-     <!--cantidad de tickets-->           
+                <!--cantidad de tickets-->
 
                 <li id="cantidad">
                     <div class="row mb-5">
@@ -123,13 +123,15 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="col">
-                                    <input type="number" name="cantidad" min="1" max="100" 
-                                        placeholder="cantidad" class="form-control" id="valor" required>
+                                    <input type="number" name="cantidad" min="1" max="100" placeholder="cantidad"
+                                        class="form-control" id="valor" required>
                                 </div>
+
                                 <div class="col">
-                                    <label for="cantidad" class="fs-4 me-3">Total: $</label><span class="fs-3" id="total">0</span>
-                                </div>  
-                               
+                                    <label for="cantidad" class="fs-4 me-3">Total: $</label><span class="fs-3"
+                                        id="total">0</span>
+                                </div>
+
                             </div>
                             <div class="row">
                                 <div class="small ms-2"> valor unitario: $<span id="totalUnitario">1500</span></div>
@@ -142,7 +144,7 @@
                 </li>
 
 
-<!--metodo de pago-->
+                <!--metodo de pago-->
 
                 <li>
                     <div class="row">
@@ -152,52 +154,102 @@
                         <div class="col-md-8 mx-4">
                             <div class="row my-3">
                                 <div class="col">
-                                    <select class="form-select" novalidate aria-label="Default select example">
-                                        <option selected>Ver opciones de pago disponibles</option>
+                                    <select class="form-select" required aria-label="Default select example"
+                                        id="select">
+                                        <option value="">Ver opciones de pago disponibles</option>
                                         <option value="1">Tarjeta de Crédito</option>
                                         <option value="2">Tarjeta de débito</option>
-                                        <option value="3">Otro</option>
+                                        <option value="3">Efectivo</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="row gy-3">
+                            <div class="row gy-3 esconder" id="pagarCredito">
                                 <div class="col-12">
+                                    <h3>Tiene Recargo</h3>
+                                    <p>1 Cuota: 10% - 3 Cuotas: 15% - 6 Cuotas: 20%</p>
                                     <div class="input-group input-group-sm">
                                         <span class="input-group-text">Numero</span>
-                                        <input type="number" min="0" value="0000" max=9999 max="9999" aria-label="primeros cuatro numeros" class="form-control" required>
-                                        <input type="number" min="0" value="0000" max=9999 max="9999" aria-label="segundos cuatro numeros" class="form-control" required>
-                                        <input type="number" min="0" value="0000" max=9999 max="9999" aria-label="terceros cuatro numeros" class="form-control" required>
-                                        <input type="number" min="0" value="0000" max=9999 max="9999" aria-label="ultimos cuatro numeros" class="form-control" required>
+                                        <input type="number" min="0" value="0000" max=9999 max="9999"
+                                            aria-label="primeros cuatro numeros" class="form-control" required>
+                                        <input type="number" min="0" value="0000" max=9999 max="9999"
+                                            aria-label="segundos cuatro numeros" class="form-control" required>
+                                        <input type="number" min="0" value="0000" max=9999 max="9999"
+                                            aria-label="terceros cuatro numeros" class="form-control" required>
+                                        <input type="number" min="0" value="0000" max=9999 max="9999"
+                                            aria-label="ultimos cuatro numeros" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="input-group">
                                         <span class="input-group-text">Cód de seguridad</span>
-                                        <input type="number" min="0" value="000" max="999" aria-label="codigo de seguridad" class="form-control">
+                                        <input type="number" min="0" value="000" max="999"
+                                            aria-label="codigo de seguridad" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <select name="creditoCuotas" id="creditoCuotas" class="form-select" required>
+                                        <option value="">Elegir</option>
+                                        <option value="1">1</option>
+                                        <option value="3">3</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                    <span> Cantidad de cuotas</span>
+                                </div>
+                            </div>
+                            <div class="row gy-3 esconder" id="pagarDebito">
+                                <h2>¡Tiene un 10% de descuento!</h2>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-text">Numero</span>
+                                    <input type="number" min="0" value="0000" max=9999 max="9999"
+                                        aria-label="primeros cuatro numeros" class="form-control" required>
+                                    <input type="number" min="0" value="0000" max=9999 max="9999"
+                                        aria-label="segundos cuatro numeros" class="form-control" required>
+                                    <input type="number" min="0" value="0000" max=9999 max="9999"
+                                        aria-label="terceros cuatro numeros" class="form-control" required>
+                                    <input type="number" min="0" value="0000" max=9999 max="9999"
+                                        aria-label="ultimos cuatro numeros" class="form-control" required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="input-group">
+                                        <span class="input-group-text">Cód de seguridad</span>
+                                        <input type="number" min="0" value="000" max="999"
+                                            aria-label="codigo de seguridad" class="form-control">
                                     </div>
                                 </div>
                             </div>
+                            <div class="row gy-3 esconder" id="pagarEfectivo">
+                                <div class="col-12">
+                                    <h2>¡Tiene un 15% de descuento!</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col d-flex justify-content-center align-items-end">
+                                <span class="fs-5 me-2 mt-5"><strong>Total: </strong></span><span
+                                    class="m-0 p-0 fs-2">$</span><span class="m-0 p-0 fs-2" id="totalFinal">0</span>
+                            </div>
+
                         </div>
 
                     </div>
                 </li>
 
 
-    <!-- Confirmar -->
+                <!-- Confirmar -->
 
-                <li>                    
+                <li>
                     <div class="row mb-4 gy-3">
                         <h1 class="mb-3 text-center">Confirmar</h1>
-                        
-                            <div class="form-check col-12">
-                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                                <label class="form-check-label" for="invalidCheck">                              
-                                 Acepta terminos y condiciones
-                                </label>
-                                <div class="invalid-feedback">
-                                    Debe aceptar terminos
-                                </div>
-                              </div>
+
+                        <div class="form-check col-12">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Acepta terminos y condiciones
+                            </label>
+                            <div class="invalid-feedback">
+                                Debe aceptar terminos
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             <button type="submit" class="btn btn-success btn-lg w-100 me-3">COMPRAR</button>
                         </div>
@@ -205,7 +257,7 @@
                             <input type="reset" class="btn btn-danger w-100 btn-lg" value="Cancelar" id="cancelar">
                         </div>
                     </div>
-                    
+
                 </li>
             </ol>
         </form>

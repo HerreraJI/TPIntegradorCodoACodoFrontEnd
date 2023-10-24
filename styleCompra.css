@@ -55,4 +55,9 @@ body {
     height: 4rem;
     text-decoration: none
   }
+
+  .esconder{
+    display: none;
+    background-color: red;
+  }
    
